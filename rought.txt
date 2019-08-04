@@ -1,0 +1,6 @@
+setUp(
+		scn.inject(constantUsersPerSec(100) during (5 minutes)).throttle(
+			reachRps(100) in (10 seconds),
+			holdFor(1 minute),
+			jumpToRps(50),
+			holdFor(10 minute))).protocols(httpProtocol)
