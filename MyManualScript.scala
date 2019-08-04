@@ -5,7 +5,7 @@ class MyFirstTest extends Simulation {
 
   // 1. Common HTTP Configuration
   val httpProtocol = http
-    .baseUrl("yourURL goes here")
+    .baseUrl("https://demo.opencart.com")
     .inferHtmlResources()
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
     .acceptEncodingHeader("gzip, deflate")
@@ -14,9 +14,9 @@ class MyFirstTest extends Simulation {
 
 
   // 2. Scenario Defination
-  val scn = scenario("Suhas")
+  val scn = scenario("Cart")
     .exec(http("Visit Category")
-      .get(" "))
+      .get("/catalog/view/theme/default/stylesheet/stylesheet.css"))
     .pause(7)
 
 
