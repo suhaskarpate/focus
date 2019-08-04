@@ -4,3 +4,10 @@ setUp(
 			holdFor(1 minute),
 			jumpToRps(50),
 			holdFor(10 minute))).protocols(httpProtocol)
+
+----------------------------
+
+
+
+https://eefl-test.fa.em3.oraclecloud.com
+
