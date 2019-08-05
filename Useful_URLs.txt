@@ -1,0 +1,24 @@
+https://groups.google.com/forum/#!searchin/gatling/regex$20matches%7Csort:date/gatling/qErj87jujGQ/jUHGMpJ8CAAJ
+
+
+val randomData = new org.apache.commons.math3.random.RandomDataImpl
+
+val selectRandomElementInList = (list: Seq[String]) => {
+  val randomIndex = randomData.nextInt(0, list.size - 1)
+  list(randomIndex)
+}
+
+...
+...
+check(regex("XXXXXX").findAll.transform(selectRandomElementInList).saveAs("idnr"))
+
+And voila, you can use ${idnr}.
+
+
+
+
+.check(
+			    regex("""<td><a href="/computers/(.*)">""")
+			    .findAll
+			    .saveAs( key = "selectedComputer")
+			)
